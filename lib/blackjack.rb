@@ -24,7 +24,7 @@ end
 
 def end_game(deal_card)
   if hit? > 21
-    puts "Sorry, you hit #{display_card_total}. Thanks for playing!"
+    puts "Sorry, you hit #{card_total}. Thanks for playing!"
   else
     puts hit?
   end
@@ -36,9 +36,9 @@ def initial_round
   # code #initial_round here
 end
 
-def hit?
+def hit?(card_total)
   prompt_user
-  get_user_input
+  answer = get_user_input
   if answer == "s"
     puts "deal_card"
   elsif answer == "h"
